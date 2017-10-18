@@ -1,0 +1,31 @@
+ a i[class^="fa"] { font-size:12px; color: black}
+ a:hover i[class^="fa"] { font-size:24px; }
+
+ .avatarImg {
+   display:block;
+   margin:auto;
+   max-width: 50%;
+   margin-top: 30px;
+ }
+
+ // html {
+ //   font-size: 14px;
+ // }
+ //
+ // @include media-breakpoint-up(sm) {
+ //   html {
+ //     font-size: 16px;
+ //   }
+ // }
+ //
+ // @include media-breakpoint-up(md) {
+ //   html {
+ //     font-size: 20px;
+ //   }
+ // }
+ //
+ // @include media-breakpoint-up(lg) {
+ //   html {
+ //     font-size: 28px;
+ //   }
+ // }
