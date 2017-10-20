@@ -36,21 +36,21 @@ export class Dropdown implements OnInit, OnDestroy {
      }
 
     public set isOpen(value) {
-        this._isOpen = !!value;
-
-         if (this.appendToBody && this.menuEl) {
-
-        }
-
-         if (this.isOpen) {
-            this.focusToggleElement();
-            dropdownService.open(this);
-        } else {
-            dropdownService.close(this);
-            this.selectedOption = null;
-        }
-        this.onToggle.emit(this.isOpen);
-        this.isOpenChange.emit(this.isOpen);
+        // this._isOpen = !!value;
+        //
+        //  if (this.appendToBody && this.menuEl) {
+        //
+        // }
+        //
+        //  if (this.isOpen) {
+        //     this.focusToggleElement();
+        //     dropdownService.open(this);
+        // } else {
+        //     dropdownService.close(this);
+        //     this.selectedOption = null;
+        // }
+        // this.onToggle.emit(this.isOpen);
+        // this.isOpenChange.emit(this.isOpen);
      }
 
     ngOnInit() {
