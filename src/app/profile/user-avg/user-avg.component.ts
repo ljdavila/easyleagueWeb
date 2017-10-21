@@ -8,7 +8,7 @@ import { User } from '../../shared/user.model';
 })
 export class UserAvgComponent implements OnInit {
   @Input() user: User;
-  sports: {
+  sportSelected: {
     id: number,
     name: string,
     position: string,
@@ -17,12 +17,17 @@ export class UserAvgComponent implements OnInit {
       rebounds: number,
       assist: number
     }
-  }[];
+  };
 
-  constructor() { }
+  constructor() {
+  console.log("user: " + this.user)}
 
   ngOnInit() {
-    this.sports = this.user.sports;
+    this.sportSelected = this.user.sports[0];
+  }
+
+  onSportSelected(item){
+    this.sportSelected = item;
   }
 
 }

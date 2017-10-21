@@ -3,18 +3,17 @@
     <div class="col-md-8">
       <h1 style="text-align: right; color: white;">Average Per Games</h1>
     </div>
-    <dropdown placeholder="Colour..." list="colours" selected="colour" property="name"></dropdown>
-    <!-- <div class="col-md-4 container"> -->
-      <!-- <div ngbDropdown class="d-inline-block">
-        <a id="dropdownBasic1" ngbDropdownToggle><small>Toggle dropdown</small></a>
-        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" *ngFor="let sport of user.sports">
-          <button class="dropdown-item">as</button> -->
-          <!-- <button class="dropdown-item">Another Action</button>
-          <button class="dropdown-item">Something else is here</button> -->
-        <!-- </div>
-      </div> -->
-    <!-- </div> -->
-
+    <div class="btn-group" dropdown>
+      <a  dropdownToggle  class="dropdown-toggle">
+        {{sportSelected.name}}
+        <span class="caret"></span>
+      </a>
+      <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <li role="menuitem" *ngFor="let sport of user.sports"><a class="dropdown-item" href="#" (click)="onSportSelected(sport)" >{{sport.name}}</a></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </div>
   </div>
   <!-- </div> -->
   <hr>
@@ -24,9 +23,9 @@
     <div class="col-md-4">Assists</div>
   </div>
   <div class="row display-3" style="text-align: center; color: white;" >
-    <div class="col-md-4">{{ userAvg.points }}</div>
-    <div class="col-md-4">{{ userAvg.rebounds }}</div>
-    <div class="col-md-4">{{ userAvg.assist }}</div>
+    <div class="col-md-4">{{ sportSelected.avgPerGames.points }}</div>
+    <div class="col-md-4">{{ sportSelected.avgPerGames.rebounds }}</div>
+    <div class="col-md-4">{{ sportSelected.avgPerGames.assist }}</div>
   </div>
 
 </div>
