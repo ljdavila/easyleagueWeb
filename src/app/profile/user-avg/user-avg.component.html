@@ -1,0 +1,31 @@
+<div class="container" style="display:block; margin:auto;">
+  <div class="row">
+    <div class="col-md-8">
+      <h1 style="text-align: right; color: white;">Average Per Games</h1>
+    </div>
+    <div class="btn-group" dropdown>
+      <a  dropdownToggle  class="dropdown-toggle">
+        {{sportSelected.name}}
+        <span class="caret"></span>
+      </a>
+      <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <li role="menuitem" *ngFor="let sport of user.sports"><a class="dropdown-item" href="#" (click)="onSportSelected(sport)" >{{sport.name}}</a></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- </div> -->
+  <hr>
+  <div class="row" style="text-align: center; color: white;">
+    <div class="col-md-4">Points</div>
+    <div class="col-md-4">Rebounds</div>
+    <div class="col-md-4">Assists</div>
+  </div>
+  <div class="row display-3" style="text-align: center; color: white;" >
+    <div class="col-md-4">{{ sportSelected.avgPerGames.points }}</div>
+    <div class="col-md-4">{{ sportSelected.avgPerGames.rebounds }}</div>
+    <div class="col-md-4">{{ sportSelected.avgPerGames.assist }}</div>
+  </div>
+
+</div>

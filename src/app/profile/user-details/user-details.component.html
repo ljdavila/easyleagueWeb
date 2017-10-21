@@ -1,0 +1,14 @@
+<div class="card testimonial-card"> <!--Card-->
+  <div class="card-up aqua-gradient"></div> <!--Background color-->
+  <div class="avatar" > <!--Avatar-->
+    <img src="{{ user.picture }}" class="rounded-circle avatarImg">
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">{{ user.name }}</h4><!--Name-->
+    <hr>
+    <p><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, adipisci</p><!--Quotation-->
+    <a href="" [mdbPopover]="content.msg" triggers="hover" placement="right" mdbRippleRadius><i class="fa fa-comment" aria-hidden="true" style="cursor:pointer;"></i></a>
+    <a href="" [mdbPopover]="content.invite" triggers="hover" placement="right" mdbRippleRadius><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  </div>
+
+</div>
