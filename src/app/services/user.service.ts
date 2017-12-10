@@ -1,18 +1,9 @@
-import { User } from '../shared/user.model';
-
+import { IUser } from '../shared/user.model';
+import { MOCK_USERS } from '../MOCK_DATA/users.mockdata';
 
 export class UserService {
-  users: User[] = [
-    new User( 0, "Luis Davila", "../../assets/images/luis.jpg", 26,
-              [{ id: 0, name: "Basketball", position: "Shooting Guard",
-                avgPerGames: {points: 25.4, rebounds: 5, assist: 7 }},
-                { id: 1, name: "Baseball", position: "Second Base",
-                  avgPerGames: {points: 5.4, rebounds: 5, assist: 3 }},
-                  { id: 2, name: "Hockey", position: "Goallie",
-                    avgPerGames: {points: 4, rebounds: 15, assist: 7 }}],
-                [{ id: 0,  name: "Sharks",  sportId: 0}])
-  ]
-
+  users: IUser[] = MOCK_USERS;
+  // console.log(this.users);
   getUsers() {
     return this.users.slice();
   }
@@ -20,5 +11,12 @@ export class UserService {
   getUser(id: number){
     return this.users[id];
   }
+
+  // getUserGames(user_id){
+  //   games = [];
+  //   for ( let game of users[user_id].games_id){
+  //     games.push()
+  //   }
+  // }
 
 }

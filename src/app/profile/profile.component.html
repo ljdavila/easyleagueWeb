@@ -1,26 +1,23 @@
 <div class="jumbotron" style="background: gray; height: 250px;">
   <div class="row">
-    <div class="col-xs-6 col-sm-2 col-md-4">
+    <div class="col-xs-6 col-sm-2 col-md-3">
       <app-user-details [user]="profileUser"></app-user-details>
     </div>
-    <div class="col-xs-6 col-sm-4 col-md-8">
-      <app-user-avg [user]="profileUser"></app-user-avg>
+    <div class="col-xs-6 col-sm-4 col-md-9">
+      <app-user-avg (statsSelected)="checkSport($event)" [user]="profileUser"></app-user-avg>
       <table class="table table-responsive">
         <thead class="thead-inverse">
           <tr>
-            <th *ngFor="let header of table.headers">{{ header }}</th>
+            <th *ngFor="let header of statsKeys(table)">{{ header }}</th>
           </tr>
         </thead>
-        <tbody *ngFor="let data of table.data">
-          <tr>
-            <th scope="row">{{ data.date }}</th>
-            <td>{{ data.against }}</td>
-            <td>{{ data.points }}</td>
-            <td>{{ data.rebounds }}</td>
-            <td>{{ data.assists }}</td>
-            <td>{{ data.steals }}</td>
+        <!-- <tbody >
+          <tr><td *ngFor="let key of statsKeys(table)">{{ table[key]}}</td></tr>
+          <tr *ngFor = "let key of games">
+            <th scope="row">{{ table[key] }}</th>
+            <td>{{ key }}</td>
           </tr>
-        </tbody>
+        </tbody> -->
       </table>
       </div>
     </div>

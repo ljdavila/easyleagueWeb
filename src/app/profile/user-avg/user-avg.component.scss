@@ -1,0 +1,39 @@
+h3 {
+  font-size: 6px;
+
+  @media (min-width: 800px) {
+    font-size: 12px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 18px;
+  }
+}
+
+h1 {
+  font-size: 10px;
+
+  @media (min-width: 800px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 25px;
+  }
+}
+
+.averages{
+    color: white;
+    // border: 1px solid blue;
+    display: table;
+    table-layout: fixed;
+    width:100%;
+}
+
+.averages-details {
+  //  border: 1px solid red;
+   color: black;
+   display: table-cell;
+   text-align: center;
+   white-space: nowrap !important;
+}

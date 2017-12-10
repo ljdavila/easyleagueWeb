@@ -5,7 +5,7 @@
     </div>
     <div class="btn-group" dropdown>
       <a  dropdownToggle  class="dropdown-toggle">
-        {{sportSelected.name}}
+        {{ sport.name }}
         <span class="caret"></span>
       </a>
       <ul *dropdownMenu class="dropdown-menu" role="menu">
@@ -17,15 +17,16 @@
   </div>
   <!-- </div> -->
   <hr>
-  <div class="row" style="text-align: center; color: white;">
-    <div class="col-md-4">Points</div>
-    <div class="col-md-4">Rebounds</div>
-    <div class="col-md-4">Assists</div>
+  <div class="row averages">
+    <div class="averages-details" *ngFor="let sportkey of statsKeys(stats)"><h3 class="md-display-3">{{sportkey| uppercase}}</h3>
+      <h1 style="">{{ stats[sportkey] }}</h1>
+   </div>
+    <!-- <div class="col-md-4">Assists</div> -->
   </div>
   <div class="row display-3" style="text-align: center; color: white;" >
-    <div class="col-md-4">{{ sportSelected.avgPerGames.points }}</div>
+    <!-- <div class="col-md-4">{{ sportSelected.stats.points }}</div>
     <div class="col-md-4">{{ sportSelected.avgPerGames.rebounds }}</div>
-    <div class="col-md-4">{{ sportSelected.avgPerGames.assist }}</div>
+    <div class="col-md-4">{{ sportSelected.assist }}</div> -->
   </div>
 
 </div>

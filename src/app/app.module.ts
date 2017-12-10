@@ -3,6 +3,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 // import { CarouselModule } from 'angular4-carousel';
 import { AppComponent } from './app.component';
+import { HttpModule }    from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CarouselSlideComponent } from './carousel/carousel-slide/carousel-slide.component';
@@ -12,6 +13,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileUserDetailsComponent } from './profile/user-details/user-details.component';
 import { UserAvgComponent } from './profile/user-avg/user-avg.component';
 import { BsDropdownModule } from 'ngx-bootstrap';
+import { KeysPipe } from './shared/pipes/keys.pipe';
+
 
 @NgModule({
   declarations: [
@@ -22,11 +25,12 @@ import { BsDropdownModule } from 'ngx-bootstrap';
     HeaderHomeComponent,
     ProfileComponent,
     ProfileUserDetailsComponent,
-    UserAvgComponent
+    UserAvgComponent,
+    KeysPipe
   ],
   imports: [
     BrowserModule,
-    // CarouselModule,
+    HttpModule,
     NgbModule.forRoot(),
     MDBBootstrapModule.forRoot(),
     BsDropdownModule.forRoot()
