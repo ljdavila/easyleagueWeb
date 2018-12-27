@@ -1,0 +1,81 @@
+$eleague-navy-blue: #1f2833;
+$eleague-off-white: #edeae1;
+$eleague-navy-jumboblue: rgb(3,11,22);
+$eleague-primary-orange: #ff927c;
+$eleague-primary-lightblue: #bbd8d3;
+// Tradelens Color pallette
+$tl-black: #1a1a1a;
+$tl-black-90: lighten($tl-black, 90%);
+$tl-black-80: lighten($tl-black, 80%);
+$tl-black-70: lighten($tl-black, 70%);
+$tl-black-60: lighten($tl-black, 60%);
+$tl-black-50: lighten($tl-black, 50%);
+$tl-black-40: lighten($tl-black, 40%);
+$tl-black-30: lighten($tl-black, 30%);
+$tl-black-20: lighten($tl-black, 20%);
+$tl-black-10: lighten($tl-black, 10%);
+
+$tl-orange: #ef660b;
+
+$tl-orange-90: lighten($tl-orange, 90%);
+$tl-orange-80: lighten($tl-orange, 80%);
+$tl-orange-70: lighten($tl-orange, 70%);
+$tl-orange-60: lighten($tl-orange, 60%);
+$tl-orange-50: lighten($tl-orange, 50%);
+$tl-orange-40: lighten($tl-orange, 40%);
+$tl-orange-30: lighten($tl-orange, 30%);
+$tl-orange-20: lighten($tl-orange, 20%);
+$tl-orange-10: lighten($tl-orange, 10%);
+
+$tl-primary-orange: $tl-orange;
+$tl-dark-orange: darken($tl-orange, 9%);
+
+$tl-gray: #fafafa;
+
+$tl-white: #ffffff;
+$tl-red: #d31313;
+$tl-green: #89d329;
+$tl-amber: #ffbd1a;
+
+// EVD Color pallette;
+$white: #ffffff;
+
+$another-gray: #d9dbdc;
+$black: #000;
+
+$primary-blue-gradient: radial-gradient(circle, $tl-black-60 0%, $tl-black-60 100%);
+
+$colors:
+(white #ffffff),
+(tl-black, $tl-black),
+(tl-black-cool, $tl-black-20),
+(tl-black-cooler, $tl-black-40),
+(tl-black-light, $tl-black-60),
+(tl-black-lightest, $tl-black-80),
+(tl-orange, $tl-orange),
+(tl-dark-orange, $tl-dark-orange)
+(tl-amber, $tl-amber),
+(tl-gray, $tl-gray),
+(tl-red, $tl-red);
+
+
+// Class Generation
+@each $color in $colors {
+
+  .bg-#{nth($color, 1)} {
+    background-color: #{nth($color, 2)};
+  }
+
+  .color-#{nth($color, 1)} {
+    color: #{nth($color, 2)};
+  }
+}
+
+.snackbar-success {
+  border-left: .5rem solid $tl-green;
+}
+
+.snackbar-error {
+  border-left: .5rem solid $tl-red;
+}
+

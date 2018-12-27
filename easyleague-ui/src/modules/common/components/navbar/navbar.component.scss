@@ -1,0 +1,58 @@
+@import 'base/colors';
+@import 'base/typography';
+
+.nav {
+  background-color: transparent;
+  background: rgb(3,11,22);
+  // border-bottom: .7rem solid rgb(147,148,150);
+}
+
+hr {
+    background: rgb(147,148,150);
+    margin-block-start: 0;
+    margin-top: 0;
+}
+
+#title {
+  font-family: $boxing;
+  font-weight: bold;
+  font-size: 1.5rem;
+  // color: #1f2833;
+  color: rgb(214,215,216);
+
+}
+
+.wrapper {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+
+  // padding-left: 2rem;
+  // padding-right: 2rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+
+}
+
+.icon {
+  border: 1px solid $eleague-off-white;
+  color: $eleague-off-white;
+  border-radius: 1rem;
+  margin-right: .5rem; 
+  height: 2rem;
+  width: 2rem;
+}
+
+.fa-search {
+  color: rgb(147,148,150);
+}
+
+.account {
+  color: $eleague-off-white;  
+}

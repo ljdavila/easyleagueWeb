@@ -1,0 +1,9 @@
+
+  
+  <app-nav [drawer]="drawer" (sideMenu)="show($event)"></app-nav>
+  <router-outlet ></router-outlet>
+
+  <div class="view-side-form">
+      <!-- <div [routerLinkActive]="['cover']"></div> -->
+      <router-outlet name="sidemenu"></router-outlet>
+  </div>

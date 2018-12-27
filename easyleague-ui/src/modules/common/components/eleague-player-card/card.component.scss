@@ -1,0 +1,91 @@
+@import 'base/typography';
+@import 'base/colors';
+
+.card {
+  width: 27rem;
+  // min-width: 20rem;
+  height: 12rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 1rem;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  // border: .1rem solid #c1c1c1;
+  // background: #f8f8f8;
+  background: $eleague-off-white;
+  color: $eleague-navy-jumboblue
+}
+
+#card {
+  position: relative;
+  padding-top: 40px;
+  margin: -15px 10px auto 30px;
+  width: 50%;
+  max-width: 30rem;
+  min-width: 20rem;
+  min-height: 12rem;
+}
+
+#card .image {
+  position: absolute;
+  left: .5rem;
+  top: 1.4rem;
+}
+
+.image {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+}
+
+.title {
+  // color: #66fcf1;
+  color: $eleague-off-white;
+  font-family: $goudy;
+  font-size: 1.8rem;
+  margin-left: 8rem;
+}
+
+.header-avatar{
+  background-image: url(../../../../assets/images/wake.jpg);
+  width: 6rem;
+  height: 6rem;
+  -webkit-border-radius: 60px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 60px;
+  -moz-background-clip: padding;
+  border-radius: 60px;
+  background-clip: padding-box;
+  margin: 7px 0 0 5px;
+  float: left;
+  background-size: cover;
+  background-position: center center;
+  border-bottom: 1px solid $eleague-navy-blue;
+}
+
+.header {
+  height: 4.8rem;
+  border-bottom: 2px solid $eleague-navy-blue;
+  border-top-right-radius: 1rem;
+  background: rgb(3,11,22);;
+}
+
+.list-group-item {
+  background: transparent;
+  padding: 0 0 0 1.5rem;
+  border: none;
+}
+
+strong {
+  color: $eleague-navy-blue;
+  font-family: $goudy;
+}
+
+.rank {
+  margin-top: 1rem; 
+  margin-bottom: 1rem; 
+  border-left: 1px solid #d3d3d3;
+  strong {
+    font-family: $polya;
+    font-size: 5rem;
+  }
+}

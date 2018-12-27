@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <mat-toolbar class="d-flex flex-row justify-content-between nav">
+    <div id="title">
+      <span (click)="openSideMenu = !openSideMenu; toggleSideMenu()" class="fa fa-bars mr-2"></span>
+      <span>EasyLeague</span></div>
+    <div class="w-25 d-flex flex-row justify-content-end">
+      <div class="d-flex flex-row" (mouseenter)="open = true" (mouseleave)="open = false">
+        <input *ngIf="open" id="search-input" class="form-control input-lg mr-2" placeholder="Search..." autocomplete="off"
+          spellcheck="false" autocorrect="off" tabindex="1" [@EnterLeave]="'appear'">
+        <div class="d-flex flex-column justify-content-center pr-2" style="  border-right: 1px solid #d3d3d3"><i class="fa fa-search"
+            aria-hidden="true"></i></div>
+      </div>
+      <button class="d-flex flex-row">
+        <div class="icon">
+          <i class="fa fa-user p-2" aria-hidden="true"></i>
+        </div>
+        <span class="account">Luis Davila</span>
+      </button>
+    </div>
+  </mat-toolbar>
+  <hr>
+</div>

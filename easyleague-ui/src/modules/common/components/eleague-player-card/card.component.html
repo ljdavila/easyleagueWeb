@@ -1,0 +1,23 @@
+<div *ngIf="player.info" class="d-flex flex-row flex-wrap ">
+  <section id="card" class="mb-3">
+    <div class="card">
+      <div class="header d-flex flex-column justify-content-center">
+        <div class="title">{{ player.info.name  }}
+        </div>
+      </div>
+      <div class="body d-flex justify-content-between">
+        <ul class=" w-72 list-group pl-2 pt-4 mt-2">
+          <li class="list-group-item"><strong>Position:</strong><span *ngFor="let position of player.position"> {{ position }}</span></li>
+          <li class="list-group-item"><strong>Hometown:</strong> {{player.info.hometown}}, {{player.info.country}}</li>
+          <li class="list-group-item"><strong>Age:</strong> {{player.info.age}}</li>
+        </ul>
+        <div class="rank w-25 d-flex flex-row justify-content-center">
+            <strong class=" d-flex flex-column justify-content-center">{{ player.info.rank }}</strong>
+        </div>
+      </div>
+    </div>
+    <div class="image">
+      <div class="header-avatar"></div>
+    </div>
+  </section>
+</div>

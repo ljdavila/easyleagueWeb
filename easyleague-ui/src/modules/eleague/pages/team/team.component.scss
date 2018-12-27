@@ -1,0 +1,179 @@
+@import 'base/typography';
+@import 'base/colors';
+
+.team-column {
+  border-right: 1px solid #c0c0c0;
+  padding-right:2rem;
+}
+
+.search-wrapper {
+  padding: 1rem;
+  margin-left: .1rem;
+  // background-image: linear-gradient(to right, #434343, #333333, #242424, #161616, #000000);
+  background-image: linear-gradient(to right top, #bbd8d3, #879fa0, #586a6d, #2e393d, #030b10);
+    // background-image: linear-gradient(to right top, #141e30, #182539, #1c2c42, #20334b, #243b55);
+
+ input { 
+    color: $eleague-navy-jumboblue;
+    border-radius: .5rem;
+    width: 100%;
+    background: none;
+    height: 4rem;
+    border: 1px solid rgba(white,.48);
+    padding: 1rem;
+  }
+}
+
+input:active, input:focus {
+  outline: 0;
+  border: none;
+}
+
+.coach-wrapper {
+  height: 25rem;
+  img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+#coach-name {
+  font-size: 3rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-family: 'Assistant';
+  letter-spacing: 0;
+  transition: opacity .3s ease;
+  color: white;
+  line-height: 1.15em;
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #bbd8d3;
+}
+
+#leaders {
+  position: relative;
+  display: inline-block;
+}
+
+.info .coach-background-info {
+  flex-grow: 1;
+  width: 0;
+  background-image: linear-gradient(to top, #feb47b, #d37971, #130a38, #130a38, #090d2c);
+  background-image: linear-gradient(to right top, darken(#000000, 50%), #1b1b1b, #282929, transparent, transparent);
+  background-image: linear-gradient(to right top, #000000, #000000, #2f2f2f, #5b5b5b, transparent);
+}
+
+#coach-info {
+  position: absolute;
+  font-size: 2em;
+  left: 5rem;
+  bottom: 10%;
+  z-index: 1;
+}
+
+.info {
+  // background: $eleague-navy-jumboblue;
+  position: absolute;
+  left: 0rem;
+  bottom: 0rem;
+  height: 25rem;
+  width: 100%;
+  z-index: 1;
+  opacity: .6;
+  display: flex;
+}
+
+.card {
+  background: transparent;
+  border: none;
+  color: #939496;
+}
+
+.card-img-top {
+  border: .3rem solid $black;
+  // box-shadow: 0 4px 8px 0 rgba(#ff927c, 0.2), 0 6px 20px 0 rgba(#ff927c, 0.19);
+}
+
+.menu{
+  border: .1rem solid #c5c6c7;
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+table th, table td{
+  border: none;
+}
+
+.jumbotron {
+  background: rgb(3,11,22);
+  padding-top: 6rem;
+}
+
+h3 {
+  color: rgb(3,11,22);
+  font-weight: bold;
+}
+
+.scrolling-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  app-card {
+    flex: 0 0 auto;
+  }
+}
+
+.section {
+  // background: #c5c6c7;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.section span {
+  font-family: $goudy;
+  font-weight: bold;
+  font-size: 2rem;
+  color: $eleague-primary-orange;
+  padding-left: none;
+}
+
+.title {
+  font-family: $boxing;
+  font-size: 5rem;
+}
+
+#jumbotron {
+  position: relative;
+}
+
+#jumbotron .menus {
+  position: absolute;
+  right: 0rem;
+  bottom: -4rem;
+}
+
+.menus {
+  display: inline-block;
+}
+
+.menus div {
+  background: #bbd8d3;
+}
+
+.menu {
+  border: 1px solid $eleague-primary-orange;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: transform .2s; /* Animation */
+  h3 {
+    font-family: $polya;
+  }
+}
+
+.menu:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+

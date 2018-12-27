@@ -1,0 +1,39 @@
+/*
+* Licensed Materials - Property of IBM and GTD Holdings
+*Copyright IBM Corp. and GTD Holdings Inc. 2017, 2018. All Rights Reserved.
+* US Government Users Restricted Rights - Use, duplication or
+* disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Markazi+Text|Ultra|Cormorant+Infant|Assistant:400italic,700italic,400,700);
+
+@font-face {
+  font-family: 'BOXING';
+  src: url(/assets/font/BOXING/BOXING.otf) format("opentype"),
+       url(/assets/font/BOXING/BOXING.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Polya';
+  src: url(/assets/font/Polya_Font/POLYA.otf) format("opentype"),
+}
+
+
+@font-face {
+  font-family: 'Arenq';
+  src: url(/assets/font/arenq/Arenq.otf) format("opentype"),
+}
+
+// Font Variables
+$roboto-slab: 'Roboto Slab', serif;   
+$markazi: 'Markazi+Text', sans-serif;
+$ultra: 'Ultra', sans-serif;
+$cormorant: 'Cormorant+Infant';
+$boxing: 'BOXING', sans-serif;
+$arenq: 'Arenq';
+$polya: 'Polya';
+$goudy: 'Assistant';
+
+html * {
+  font-family: 'Roboto', sans-serif;
+}
