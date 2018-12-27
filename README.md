@@ -1,1 +1,1 @@
-# easyleagueWeb
+# EasylLeague - Web Development
