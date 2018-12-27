@@ -1,0 +1,25 @@
+{
+  "name": "easyleague-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "build": "tsc",
+    "start": "npm run build && nodemon ./dist/server.js",
+    "createDB": "node ./scripts/elasticsearch/create.js",
+    "deleteDB": "node ./scripts/elasticsearch/delete.js",
+    "mapDB": "node ./scripts/elasticsearch/map.js",
+    "fillDB": "node ./scripts/elasticsearch/fill-db.js",
+    "setUpDB": "npm run createDB && npm run mapDB && npm run fillDB"
+  },
+  "author": "Luis J Davila",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.16.0",
+    "@types/mocha": "^5.2.5",
+    "elasticsearch": "^15.2.0",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.9"
+  }
+}
