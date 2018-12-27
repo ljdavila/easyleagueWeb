@@ -2,8 +2,8 @@
   NodeJS express project 
 
 ## Requirements
-### NodeJS
-### ElasticSearch
+- NodeJS
+- ElasticSearch
 
 ## Setting up environment
 Run `npm install`. Make sure elasticsearch is running in your machine. Then run `npm run setUpDb` to set up the local database with dummy data.
