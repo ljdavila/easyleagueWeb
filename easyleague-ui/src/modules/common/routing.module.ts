@@ -1,17 +1,19 @@
 import { SideMenuComponent } from './components/sidemenu/sidemenu.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { SideFormComponent } from './components/sideform';
 
 const routes: Routes = [
   {
-    path: 'add',
+    path: 'menu',
     component: SideMenuComponent,
     outlet: 'sidemenu'
   },
-//   {
-//     path: 'error',
-//     component: ErrorComponent
-//   },
+  {
+    path: 'add',
+    component: SideFormComponent,
+    outlet: 'sideform'
+  },
 //   {
 //     path: '**',
 //     component: PageNotFoundComponent

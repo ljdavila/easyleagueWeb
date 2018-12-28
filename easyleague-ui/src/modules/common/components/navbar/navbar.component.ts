@@ -31,8 +31,9 @@ export class NavbarComponent {
   toggleSideMenu() {
     console.log(this.openSideMenu);
     if (this.openSideMenu) {
-      this.router.navigate([{ outlets: { sidemenu: ['add'] } }]);
+      this.router.navigate([{ outlets: { sidemenu: ['menu'] } }]);
     } else {
-      this.router.navigate(['/', {outlets: {sidemenu: null}}]);    }
+      this.router.navigate(['/', {outlets: {sidemenu: null}}]);
+    }
   }
 }

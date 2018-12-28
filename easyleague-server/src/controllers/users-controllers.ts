@@ -27,6 +27,7 @@ export class UsersControllers {
         console.log("--- Hits ---");
         resp.hits.hits.forEach(function (hit) {
           console.log(hit);
+          hit._source.id = hit._id;
           result.push(hit._source);
         })
         res.json(result);
@@ -61,6 +62,7 @@ export class UsersControllers {
 
         resp.hits.hits.forEach(function (hit) {
           console.log(hit);
+          hit._source.id = hit._id;
           result.push(hit._source);
         });
         console.log(result)

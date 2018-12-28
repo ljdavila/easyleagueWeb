@@ -1,0 +1,98 @@
+@import 'base/colors';
+@import 'base/typography';
+
+.team-card {
+  //   border: 1px solid $eleague-navy-jumboblue;
+    border-radius: .5rem;
+    background: $eleague-off-white;
+    color: $eleague-navy-jumboblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .card-title {
+    color: $eleague-navy-jumboblue;
+    line-height: .5;
+  }
+  
+  .card-title:hover {
+    cursor: pointer;
+  }
+  
+  .card-subtitle {
+    color: #526464;
+    font-size: .5rem;
+  }
+  
+  .card-subtitle:hover {
+    cursor: pointer;
+    color: $eleague-primary-lightblue;
+  }
+  
+  .card-text {
+    color: #526464;
+    font-size: .8rem;
+  }
+  
+  .card-footer {
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    border: 2px solid $eleague-off-white;
+    background: $eleague-navy-jumboblue;
+    color: $eleague-primary-lightblue;
+    font-family: $polya;
+    height: 4rem;
+  
+    span {
+      padding-left: .5rem;
+      padding-top: .2rem;
+    }
+    h5 {
+      padding-left: 1rem;
+  
+      color: $eleague-primary-lightblue;
+      font-weight: bold;
+    }
+  }
+  
+  .card-body {
+    padding: 1rem;
+    line-height: .5rem;
+  }
+  
+  img {
+    border: .2rem solid #c0c0c0;
+    border-radius: 5rem;
+    height: 7rem;
+    width: 7rem;
+  }
+  
+#event {
+  background: $eleague-off-white;
+}
+
+#event:hover {
+  background: white;
+  cursor: pointer;
+}
+
+#category {
+  background: $eleague-primary-lightblue;
+  color: white;
+  border-radius: .5rem;
+  padding: 1.5rem;
+  font-size: 2rem;
+  font-weight: bolder;  
+}
+
+.month {
+  font-size: 1rem;
+  color: $eleague-primary-orange;
+}
+
+.date {
+  font-size: 1.8rem;
+}
+
+.time {
+  font-size: .8rem
+}

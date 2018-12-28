@@ -1,20 +1,33 @@
 @import 'base/colors';
 @import 'base/typography';
 
+// .side-form {
+//   z-index: 1;
+//   top: 0;
+//   right: 0;
+//   width: 80%;
+//   height: 100%;
+//   overflow: auto;
+//   padding: 1.2rem;
+//   border-right: 1px solid black;
+//   height: 100%;
+//   position: fixed;
+//   // background: rgba(14,15,22, .6);
+//   backdrop-filter: blur(15px);
+//   -webkit-backdrop-filter: blur(5px);
+// }
+
 .side-form {
-  z-index: 1;
+  position: absolute;
+  z-index: 100;
   top: 0;
-  bottom: 0;
   left: 0;
-  width: 25%;
+  width: 20%;
   height: 100%;
   overflow: auto;
-  background: #fff;
-  padding: 1.2rem;
-  border-right: 1px solid black;
-  height: 100%;
-  position: fixed;
   background: rgba(14,15,22, .6);
+  padding: 20px;
+  border-right: 1px solid black;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(5px);
 }

@@ -25,7 +25,8 @@ import { AppRoutingModule } from './routing.module';
     MatIconModule,
     MatCardModule,
     MatSidenavModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
 
   ],
   exports: [
@@ -39,7 +40,8 @@ import { AppRoutingModule } from './routing.module';
     MatCardModule,
     MatDividerModule,
     MatSidenavModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [
     ...SERVICES_DECLARATIONS,

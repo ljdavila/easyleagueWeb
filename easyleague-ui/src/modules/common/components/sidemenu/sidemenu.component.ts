@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { slideInOutAnimation } from '../../animations/slideIn-slideOut';
+import { slideInOutAnimationLeft } from '../../animations/slideIn-left';
+
 @Component({
   selector: 'app-sidemenu',
   templateUrl: './sidemenu.component.html',
   styleUrls: ['./sidemenu.component.scss'],
+  animations: [slideInOutAnimationLeft],
+  host: { '[@slideInOutAnimationLeft]': ''}
 })
 export class SideMenuComponent {
   showFiller = false;

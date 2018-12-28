@@ -1,6 +1,19 @@
 <section id="jumbotron">
   <div class="jumbotron">
-
+    <div class="d-flex flex-row w-50" style="height: 100%">
+      <div class="d-flex flex-column pr-2 mr-2">
+        <div class="mt-auto text-center">
+          <button type="button" class="btn btn-info action" (click)="openSideForm()"><span class="fa fa-plus"></span></button>
+        </div>
+        <span class="action-text mt-1">Add team</span>
+      </div>
+      <div class="d-flex flex-column pr-2 mr-2" style="height: 100%">
+        <div class="mt-auto text-center">
+          <button type="button" class="btn btn-info action"><span class="fa fa-envelope-o"></span></button>
+        </div>
+        <span class="action-text mt-1">Message teams</span>
+      </div>
+    </div>
   </div>
   <div class="d-flex flex-row search-wrap">
     <section id="search">
@@ -8,7 +21,6 @@
       <div class="fa fa-search"></div>
     </section>
   </div>
-
 </section>
 <div class="section">
   <span class="ml-5">My Teams</span>
@@ -16,56 +28,6 @@
 <mat-divider class="ml-5 mr-5 mb-3"></mat-divider>
 <div class=" d-flex flex-row pl-5 flex-wrap">
   <div class=" p-2" *ngFor="let team of searchedTeams">
-    <div class="team-card" style="width: 18rem;">
-      <div class="d-flex flex-row-reverse pt-1 pr-3"><span class="fa fa-ellipsis-h" style="color: #c0c0c0; font-size: 1.3rem"></span></div>
-      <div class="d-flex flex-row justify-content-center p-2">
-        <img src="../../../../assets/images/wake.jpg" class="card-img-top" alt="...">
-      </div>
-      <h4 class="card-title text-center"><strong>{{team.name}}</strong></h4>
-      <p class="card-subtitle text-center">League: LIBA</p>
-      <div class="card-body">
-        <p class="card-text"><strong>Upcoming...</strong></p>
-
-
-        <div id="event" class="card d-flex flex-row p-2">
-          <div id="category">
-            G
-          </div>
-          <div class="d-flex flex-column justify-content-center">
-            <div class="d-flex flex-row">
-              <div class="month ml-1">Nov</div>
-              <div class="card-text ml-3 time">8:00am to 10:00am</div>
-            </div>
-            <div class="d-flex flex-row justify-content-between">
-              <div class="date mt-3">12th</div>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-      <div class="card-footer">
-        <div class="row">
-          <div class="col ">
-            <div class="row pl-1">
-              <span class="card-link fa fa-trophy" style="color: #C9AE5D"></span>
-              <h5>10</h5>
-            </div>
-          </div>
-          <div class="col border-left">
-            <div class="row pl-1">
-              <span class="card-link fa fa-trophy" style="color: #c0c0c0"></span>
-              <h5>10</h5>
-            </div>
-          </div>
-          <div class="col border-left">
-            <div class="row pl-1">
-              <span class="card-link fa fa-trophy" style="color: #6C541E"></span>
-              <h5>10</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <app-team-card [team]="team"></app-team-card>
   </div>
 </div>

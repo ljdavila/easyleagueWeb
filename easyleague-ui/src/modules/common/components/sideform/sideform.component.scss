@@ -1,0 +1,15 @@
+@import 'base/colors';
+@import 'base/typography';
+
+.side-form {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  overflow: auto;
+  background: $eleague-off-white;
+  padding: 20px;
+  border-left: 1px solid #e0e0e0;
+}

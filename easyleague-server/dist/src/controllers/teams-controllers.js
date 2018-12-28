@@ -21,6 +21,7 @@ class TeamsControllers {
                 console.log("--- Hits ---");
                 resp.hits.hits.forEach(function (hit) {
                     console.log(hit);
+                    hit._source.id = hit._id;
                     result.push(hit._source);
                 });
                 res.json(result);

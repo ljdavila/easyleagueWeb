@@ -1,15 +1,18 @@
 import { TeamsService } from './../../../common/services/teams/teams.service';
 import { Component, OnInit } from '@angular/core';
+import { routeAnimations } from 'src/modules/common/animations/routes';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-page',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss']
+  styleUrls: ['./list.component.scss'],
+  animations: [routeAnimations],
 })
 export class ListPageComponent implements OnInit {
   myTeams; searchedTeams;
 
-  constructor(private teamsService: TeamsService) { }
+  constructor(private teamsService: TeamsService, private router: Router) { }
 
   ngOnInit() {
     this.teamsService.getMyTeams('user-davi').subscribe((teams) => {
@@ -32,5 +35,9 @@ export class ListPageComponent implements OnInit {
     } else {
       this.searchedTeams = this.myTeams;
     }
+  }
+
+  openSideForm() {
+    this.router.navigate([{ outlets: { sideform: ['add'] } }]);
   }
 }

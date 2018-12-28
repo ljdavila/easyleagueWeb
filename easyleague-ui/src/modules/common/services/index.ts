@@ -1,3 +1,4 @@
+import { AnimationsService } from './animations/animations.service';
 import { UsersService } from './users';
 import { TeamsService } from './teams';
 
@@ -7,5 +8,6 @@ export * from './users';
 
 export const SERVICES_DECLARATIONS = [
   UsersService,
-  TeamsService
+  TeamsService,
+  AnimationsService
 ];

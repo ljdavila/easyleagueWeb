@@ -10,7 +10,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import * as Pages from './pages';
 import { TeamResolver } from '../common/resolvers/team.resolver';
-import { SideMenuComponent } from '../common';
 import { ListPageComponent } from './pages/list';
 
 const routes: Routes = [
@@ -24,16 +23,11 @@ const routes: Routes = [
     component: Pages.HomeComponent,
   },
   {
-    path: 'team',
+    path: 'team/:id',
     component: Pages.TeamComponent,
     resolve: {
      team: TeamResolver
     }
-  },
-  {
-    path: 'add',
-    component: SideMenuComponent,
-    outlet: 'sidemenu'
   },
   {
     path: 'teams',

@@ -1,0 +1,49 @@
+<div class="team-card" style="width: 18rem;">
+  <div class="d-flex flex-row justify-content-center p-2">
+    <div class="w-100 text-center">
+      <img src="../../../../assets/images/wake.jpg" class="card-img-top ml-3" alt="...">
+    </div>
+    <span class="fa fa-ellipsis-h ml-auto" style="color: #c0c0c0; font-size: 1.3rem"></span>
+  </div>
+  <h4 class="card-title text-center" [routerLink]="['/team', team.id]"><strong>{{team.name}}</strong></h4>
+  <p class="card-subtitle text-center">League: LIBA</p>
+  <div class="card-body">
+    <p class="card-text"><strong>Upcoming...</strong></p>
+    <div id="event" class="card d-flex flex-row p-2">
+      <div id="category">
+        G
+      </div>
+      <div class="d-flex flex-column justify-content-center">
+        <div class="d-flex flex-row">
+          <div class="month ml-1">Nov</div>
+          <div class="card-text ml-3 time">8:00am to 10:00am</div>
+        </div>
+        <div class="d-flex flex-row justify-content-between">
+          <div class="date mt-3">12th</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="row">
+      <div class="col ">
+        <div class="row pl-1">
+          <span class="card-link fa fa-trophy" style="color: #C9AE5D"></span>
+          <h5>10</h5>
+        </div>
+      </div>
+      <div class="col border-left">
+        <div class="row pl-1">
+          <span class="card-link fa fa-trophy" style="color: #c0c0c0"></span>
+          <h5>10</h5>
+        </div>
+      </div>
+      <div class="col border-left">
+        <div class="row pl-1">
+          <span class="card-link fa fa-trophy" style="color: #6C541E"></span>
+          <h5>10</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

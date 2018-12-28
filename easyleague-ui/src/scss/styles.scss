@@ -14,10 +14,14 @@ html, body {
     background: #f5f5f5;
     color: $eleague-off-white;
     font-family: 'Assistant', sans-serif;
+    outline: none;
 }
+
+button:focus, div:focus, strong:focus, h4:focus, li:focus { outline: none; }
 
 
 
 h1, h2, h3{
   color: $eleague-primary-orange;
+  :focus { outline: none; }
 }
