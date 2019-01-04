@@ -6,22 +6,19 @@ import { CommonModule } from '../common/common.module';
 import { AppComponent } from './../common/components/app/app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import { ELEAGUE_COMPONENT_DECLARATIONS } from './component';
 
 @NgModule({
   declarations: [
     ...COMPONENT_DECLARATIONS,
-    ...ELEAGUE_COMPONENT_DECLARATIONS
   ],
   imports: [
-    BrowserAnimationsModule,
     AppRoutingModule,
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
     CommonModule
   ],
 
+  exports: [
+    ...COMPONENT_DECLARATIONS
+  ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]

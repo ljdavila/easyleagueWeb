@@ -37,4 +37,16 @@ export class UsersService {
       }
     ));
   }
+
+  getUsersByName(name: string): Observable<any> {
+    const params: { [param: string]: string | string[] } = {};
+
+    params.name = name;
+    return this.http.get(`${this.uri}/user`, {params: params}).pipe(map(
+      data => {
+        console.log(data);
+        return data;
+      }
+    ));
+  }
 }

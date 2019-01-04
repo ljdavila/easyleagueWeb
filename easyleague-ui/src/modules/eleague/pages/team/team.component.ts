@@ -46,7 +46,6 @@ export class TeamComponent implements OnInit {
         if (this.searchedPlayer) {
           this.show = true;
           setTimeout(() => this.animate = 'start', 1000);
-
         }
       });
     } else {

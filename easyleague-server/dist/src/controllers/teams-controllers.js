@@ -28,6 +28,22 @@ class TeamsControllers {
             }
         });
     }
+    postTeam(req, res) {
+        console.log('req.body123');
+        console.log(req.body);
+        app_1.elasticSearchClient.index({
+            index: 'teams',
+            type: 'doc',
+            body: req.body.body
+        }, function (err, resp, status) {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                console.log(`Added team ${req.body.name}`, resp);
+            }
+        });
+    }
 }
 exports.TeamsControllers = TeamsControllers;
 //# sourceMappingURL=teams-controllers.js.map

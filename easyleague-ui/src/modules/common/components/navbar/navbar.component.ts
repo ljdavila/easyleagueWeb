@@ -1,3 +1,4 @@
+import { AuthenticationService } from './../../services/authentication/authentication.service';
 import { Component, EventEmitter, Output, Input } from '@angular/core';
 import { trigger, transition, style, animate, state } from '@angular/animations';
 import { Location } from '@angular/common';
@@ -26,7 +27,12 @@ export class NavbarComponent {
   open = false;
   openSideMenu = false;
 
-  constructor(private _location: Location, private router: Router) { }
+  constructor(private _location: Location, private router: Router,
+              private authService: AuthenticationService) { }
+
+  logout() {
+    this.authService.logout();
+  }
 
   toggleSideMenu() {
     console.log(this.openSideMenu);

@@ -1,3 +1,4 @@
+import { AuthGuard } from './../common/guards/authentication.guard';
 import { HomeComponent } from './pages/home/home.component';
 /*
 ** Licensed Materials - Property of IBM and GTD Holdings
@@ -13,11 +14,6 @@ import { TeamResolver } from '../common/resolvers/team.resolver';
 import { ListPageComponent } from './pages/list';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
   {
     path: 'home',
     component: Pages.HomeComponent,

@@ -34,5 +34,23 @@ export class TeamsControllers {
       }
     });
   }
+
+  public postTeam(req: Request, res: Response) {
+    console.log('req.body123');
+
+    console.log(req.body);
+    elasticSearchClient.index({
+      index: 'teams',
+      type: 'doc',
+      body: req.body.body
+    }, function (err, resp, status) {
+      if (err) {
+        console.log(err);
+      }
+      else {
+        console.log(`Added team ${req.body.name}`, resp);
+      }
+    });
+  }
   
 }

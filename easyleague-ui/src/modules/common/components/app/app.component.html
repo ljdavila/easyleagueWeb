@@ -1,5 +1,12 @@
-<app-nav [drawer]="drawer"></app-nav>
-<router-outlet></router-outlet>
+
+<!-- <ul class="nav navbar-nav navbar-right mt-5">
+    <li *ngIf="!auth.isLoggedIn()"><a routerLink="/login">Sign in</a></li>
+    <li *ngIf="auth.isLoggedIn()"><a routerLink="/home">{{ auth.getUserDetails()?.name }}</a></li>
+    <li *ngIf="auth.isLoggedIn()"><a (click)="auth.logout()">Logout</a></li>
+</ul> -->
+
+<app-nav *ngIf="auth.isLoggedIn()" [drawer]="drawer"></app-nav>
+<router-outlet class="mb-4"></router-outlet >
 
 <div class="view-side-form">
     <router-outlet name="sidemenu"></router-outlet>

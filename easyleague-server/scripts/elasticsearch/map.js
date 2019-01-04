@@ -42,11 +42,12 @@ client.indices.putMapping({
       'name': { 'type': 'text' },
       'sport': { 'type': 'keyword'},
       'created': { 'type': 'date'},
-      'broken': { 'type': 'date'},
+      'logo': { 'type': 'binary'},
       'coach_id': { 'type': 'keyword'},
       'players': {"type" : "nested",
                   properties: {
                     "id": {'type': 'keyword'},
+                    "name": {'type': 'keyword'},
                     'position': {'type': 'keyword'}
                   }
                 }    
@@ -76,7 +77,12 @@ client.indices.putMapping({
       'country' : { 'type': 'keyword'},
       'type': { 'type': 'text' },
       'team_id': {'type': 'keyword'},
-      'league_id': { 'type':'keyword' }
+      'league_id': { 'type':'keyword' },
+      'password': {'type':'text'},
+      'salt': {'type':'text'},
+      'hash': {'type':'text'}
+
+
     }
   }
 }, function (err, resp, status) {
