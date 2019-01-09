@@ -33,76 +33,6 @@ export class Routes {
       })
     })
 
-
-    app.route('/join').get((req: Request, res) => {
-      // res.render('join', { title: "Join", userData: req.user, messages: { danger: req.flash('danger'), warning: req.flash('warning'), success: req.flash('success') } });
-
-    })
-
-    app.route('/join').post( async function (req: Request, res: Response) {
-      let result = [];
-      const pwd = await bcrypt.hash(req.body.password, 5);
-      // const client = await pool.connect()
-      // await client.query(‘BEGIN’)
-      console.log('pwd');
-
-      console.log(pwd)
-      elasticSearchClient.search({
-        index: 'users',
-        body: {
-          query: {
-            match: { 
-              "email": req.body.email,
-              "type": req.body.type
-           }
-          }
-        }
-      }, function (error, resp, status) {
-        if (error) {
-          console.log("search error: " + error)
-        }
-        else {
-          console.log("--- Response ---");
-          console.log(resp);
-          console.log("--- Hits ---");
-          resp.hits.hits.forEach(function (hit) {
-            console.log(hit);
-            hit._source.id = hit._id;
-            result.push(hit._source)
-          });
-          console.log('resulting');
-          console.log(result);
-          console.log(result.length);
-
-          if (result.length > 0) {
-            console.log('resulting');
-            console.log(result);
-            console.log(result.length);
-            res.json({ "msg": "User already registered" });
-          } else {
-            elasticSearchClient.index({
-              index: 'users',
-              type: 'doc',
-              // id: uuidv4(),
-              body: {
-                "email": req.body.email,
-                "password": pwd,
-                "type": "credentials"
-              }
-            }, function (err, resp, status) {
-              if (err) {
-                console.log(err);
-              }
-              else {
-                console.log(`Registered user ${req.body.email}`, resp);
-                // res.redirect('/login');
-              }
-            });
-          }
-        }
-      });
-    });
-
     /********************* Elastic Search routes **********************/
     app.route('/users').get(this.userController.getUsers);
 
@@ -118,7 +48,7 @@ export class Routes {
 
     app.route('/api/register').post(this.authController.register); // to handle new users registering
     app.route('/api/login').post(this.authController.login); // to handle returning users logging in
-    app.route('/api/profile/USERID').get();
+    // app.route('/api/profile/USERID').get();
     // app.get('/profile', auth, this.profileController.profileRead);
 
 

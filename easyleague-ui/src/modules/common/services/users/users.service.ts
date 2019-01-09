@@ -12,6 +12,30 @@ export class UsersService {
     this.uri = 'http://localhost:4000/users';
   }
 
+  addUser(body) {
+    // const localVarHeaderParams: any = {
+    //   'Content-Type': 'application/json',
+    //   'Accept': 'application/json',
+    //   'Accept-Charset': 'utf-8',
+    // };
+    // const localVarFormParams: any = {};
+
+    // const localVarRequestOptions: localVarRequest.Options = {
+    //   method: 'POST',
+    //   headers: localVarHeaderParams,
+    //   uri: this.uri + '/team',
+    //   json: true,
+    //   body: body
+    // };
+    return this.http.post(this.uri + '/user', { body: body }).pipe(map(
+      data => {
+        console.log('data');
+        console.log(data);
+        return data;
+      }
+    ));
+  }
+
   getAllUsers(): Observable<any> {
     console.log('Gettin users');
     return this.http.get(this.uri).pipe(map(

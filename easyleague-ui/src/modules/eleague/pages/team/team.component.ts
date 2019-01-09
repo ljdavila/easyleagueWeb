@@ -19,8 +19,8 @@ import { trigger, transition, query, style, animate, state } from '@angular/anim
 })
 export class TeamComponent implements OnInit {
   searchedPlayer;
-  team; show = false;
-  cards = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
+  team;
+  show = false;
   animate;
   constructor(
     private teamService: TeamsService,
@@ -29,7 +29,6 @@ export class TeamComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
     this.route.data.pipe(map(data => data)).subscribe((dataIn: any) => {
       this.team = dataIn['team'][0];
     });
@@ -38,11 +37,9 @@ export class TeamComponent implements OnInit {
   findPlayer(searched: string) {
     if (searched) {
       this.team.players.find((player) => {
-        console.log(player);
         if (player.name.toLowerCase().includes(searched.toLowerCase())) {
           this.searchedPlayer = player;
         }
-        console.log(this.searchedPlayer);
         if (this.searchedPlayer) {
           this.show = true;
           setTimeout(() => this.animate = 'start', 1000);

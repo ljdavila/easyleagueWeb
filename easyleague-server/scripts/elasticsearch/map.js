@@ -71,18 +71,16 @@ client.indices.putMapping({
       'name': { 'type': 'text' },
       'email': { 'type': 'text' },
       "user_name": { "type": "text" },
-      'age': { 'type': 'long' },
+      'birthday': { 'type': 'keyword' },
       'rank': { 'type': 'long' },
       'hometown': {'type': 'keyword'},
       'country' : { 'type': 'keyword'},
       'type': { 'type': 'text' },
       'team_id': {'type': 'keyword'},
       'league_id': { 'type':'keyword' },
-      'password': {'type':'text'},
       'salt': {'type':'text'},
-      'hash': {'type':'text'}
-
-
+      'hash': {'type':'text'},
+      'picture': {'type': 'binary'}
     }
   }
 }, function (err, resp, status) {

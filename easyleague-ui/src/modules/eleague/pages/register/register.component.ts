@@ -18,13 +18,13 @@ export class RegisterComponent implements OnInit {
       password: ''
     };
   }
-  register() {
-    this.authService.register(this.credentials).subscribe(() => {
-      this.router.navigateByUrl('/profile');
-    }, (err) => {
-      console.error(err);
-    });
-  }
+  // register(body) {
+  //   this.authService.register(this.credentials, body).subscribe(() => {
+  //     this.router.navigateByUrl('/profile');
+  //   }, (err) => {
+  //     console.error(err);
+  //   });
+  // }
 
 
 

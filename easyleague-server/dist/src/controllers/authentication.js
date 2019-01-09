@@ -52,7 +52,7 @@ class AuthControllers {
                         // id: uuidv4(),
                         body: {
                             "email": req.body.email,
-                            "password": user.user.hash,
+                            // "password": user.user.hash,
                             "salt": user.user.salt,
                             "hash": user.user.hash,
                             "type": "credentials"
@@ -64,7 +64,21 @@ class AuthControllers {
                         else {
                             console.log(`Registered user ${req.body.email}`);
                             res.json({ "msg": `Registered user ${req.body.email}` });
-                            // res.redirect('/login');
+                        }
+                    });
+                    req.body.type = 'user';
+                    app_1.elasticSearchClient.index({
+                        index: 'users',
+                        type: 'doc',
+                        // id: uuidv4(),
+                        body: req.body
+                    }, function (err, resp, status) {
+                        if (err) {
+                            console.log(err);
+                        }
+                        else {
+                            console.log(`User ${req.body.email} details added`);
+                            res.status(200);
                         }
                     });
                 }

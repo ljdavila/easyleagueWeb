@@ -1,4 +1,4 @@
-import { LoginComponent } from './login/login.component';
+import { LandingComponent } from './landing/landing.component';
 import { ListPageComponent } from './list/list.component';
 import { HomeComponent } from './home/home.component';
 import { TeamComponent } from './team';
@@ -13,6 +13,6 @@ export const COMPONENT_DECLARATIONS = [
   TeamComponent,
   ListPageComponent,
   RegisterComponent,
-  LoginComponent,
+  LandingComponent,
   ProfileComponent
 ];

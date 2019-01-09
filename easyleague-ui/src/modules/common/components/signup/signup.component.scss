@@ -1,0 +1,139 @@
+
+@import 'base/colors';
+@import 'base/typography';
+
+:host {
+  background: rgba(14,15,22, .6);
+  color: #fff;
+  position: fixed;
+  left: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  min-width: 250px;
+  z-index: 9999;
+  // font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  // -webkit-backdrop-filter: blur(5px);
+  // backdrop-filter: blur(15px);
+}
+
+.close {
+  font-size: 1rem;
+  color: $eleague-primary-lightblue;
+  padding: 1rem;
+}
+ 
+.side-form {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(14,15,22, .6);
+  padding: 2rem;
+  padding-top: 5rem;
+   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.box {
+  padding: 1rem;
+  padding-top: .7rem;
+
+  color: darken(rgb(202,202,202), 10%);
+}
+
+.players {
+  border: 1px solid darken(rgb(202,202,202), 50%);
+  background: darken(rgb(202,202,202), 65%);
+  height: 100%;
+  overflow-y: scroll;
+}
+
+label {
+  margin-bottom: .2rem;
+  margin-top: .2rem;
+  color: $eleague-off-white;
+}
+
+input {
+  background: $eleague-navy-jumboblue;
+  border: 1px solid darken(rgb(202,202,202), 50%);
+  color: $eleague-off-white;
+  // padding: 1rem;
+  height: 4rem;
+}
+
+.title-wrapper {
+    font-size: 2rem;
+    border-bottom: 1px solid darken(rgb(202,202,202), 60%);
+    padding: .5rem;
+  h1 {
+    font-weight: bold;
+    color: $eleague-primary-orange;
+  }
+}
+
+.file-input {
+  border: .1rem dotted darken(rgb(202,202,202), 30%);
+  height: 250px;  
+  width: 250px;
+  img {
+    cursor: pointer;
+    height: inherit;
+    width: inherit;
+  }
+}
+
+.fa-times {
+  line-height: 1.5rem;
+}
+
+.btn-custom {
+  background: $eleague-primary-lightblue;
+  color: $eleague-navy-jumboblue; 
+  font-family: $polya;
+  font-weight: bold;
+  height: 3rem;
+}
+
+.form-container {
+  height: 100%;
+}
+
+form {
+  height: 100%;
+}
+
+.fa-picture-o {
+  font-size: 2.5rem;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1); 
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1); 
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
+  
+}
+
+.fa-picture-o:hover {
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.3);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.3);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.3);
+    transition: all 200ms ease-in;
+    transform: scale(1.3);
+}
+
+.fa-arrow-right {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $eleague-primary-lightblue;
+}

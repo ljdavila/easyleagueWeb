@@ -1,0 +1,52 @@
+<div class="d-flex flex-row justify-content-between title-wrapper pl-3">
+  <h1>Create an account</h1>
+  <span class="close" (click)="closeSideForm()">Go back to login <span class="fa fa-arrow-right"></span></span>
+</div>
+<form [formGroup]="signupForm" (ngSubmit)="createAccount(signupForm)" (keydown.enter)="$event.preventDefault()" autocomplete="off">
+  <div class="form-container d-flex flex-column p-4">
+    <div class="d-flex flex-row w-100">
+      <div class="d-flex flex-column mt-2 w-100" style="height: 100%;">
+        <div class="d-flex flex-row justify-content-between w-100">
+          <div class="d-flex flex-column w-100 pr-1">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+          </div>
+          <div class="d-flex flex-column w-100 pl-1 mb-2">
+            <label for="name">Birthday</label>
+            <input type="text" class="form-control" id="birthday" formControlName="birthday">
+          </div>
+        </div>
+        <label for="name">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email" autocomplete="nope">
+        <label for="re-email">Re-enter email</label>
+        <input type="email" class="form-control" id="re-email" autocomplete="nope">
+      </div>
+      <div class="box text-center">
+        <div class="d-flex flex-row justify-content-between mb-2">
+          <span>Add a profile picture</span><span (click)="removePreview()" class="fa fa-times"></span>
+        </div>
+        <input #file type="file" accept='image/*' (change)="preview(file.files)" style="display: none" formControlName="picture" />
+        <div class="file-input d-flex flex-column justify-content-center" (click)="file.click()">
+          <img id="image" [src]="imgURL || 'http://placehold.it/180'" alt="your logo" *ngIf="imgURL" />
+          <span class="fa fa-picture-o text-center" *ngIf="!imgURL"></span>
+        </div>
+      </div>
+    </div>
+    <label for="name">Password</label>
+    <input type="password" class="form-control" id="password" formControlName="password">
+    <input type='hidden' name='psw'>
+    <div class="d-flex flex-row justify-content-between w-100">
+      <div class="d-flex flex-column w-100 pr-1">
+        <label for="name">Hometown</label>
+        <input type="text" class="form-control" id="city" formControlName="hometown"  autocomplete="nope">
+      </div>
+      <div class="d-flex flex-column w-100 pl-1">
+        <label for="name">Country</label>
+        <input type="text" class="form-control" id="country" formControlName="country" autocomplete="nope">
+      </div>
+    </div>
+    <div class="pt-4 pl-1">
+      <button type="submit" class="btn btn-custom w-100">Create your account</button>
+    </div>
+  </div>
+</form>

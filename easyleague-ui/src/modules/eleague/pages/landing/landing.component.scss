@@ -1,0 +1,170 @@
+  @import 'base/colors';
+  @import 'base/typography';
+
+  .background {
+    background-image: url('../../../../assets/images/park.jpg');
+    background-size: cover;
+    background-color: $eleague-off-white;
+    height: 100%;
+  }
+
+  // .form-container {
+  //   background: rgba($eleague-navy-jumboblue, .96);
+  //   width: 40%;
+  // }
+
+  // #app-title {
+  //   font-family: $boxing;
+  //   font-size: 7rem;
+  //   color: $eleague-primary-orange;  
+  // }
+
+  // #subtitle {
+  //   color: $eleague-primary-gray;
+  // }
+
+  // label {
+  //   color: $eleague-off-white;
+  // }
+
+  // input {
+  //   background: transparent;
+  //   border: none;
+  //   color: $eleague-off-white;
+  //   padding: 1rem;
+  //   height: 2.5rem;
+  //   outline: none;
+
+  // }
+  // input:focus { 
+  //   background:transparent;
+  //   border-style: none; 
+  //   outline: -webkit-focus-ring-color auto 5px;
+  //   outline: none;
+  // }
+
+  // .form-group {
+  //   background: $eleague-navy-jumboblue;
+  //   padding: .5rem;
+  //   // margin: 0 5rem 0 5rem;
+  //   border: 1px solid darken(rgb(202,202,202), 60%);
+  // }
+
+  // .form-control:focus {
+  //   border-color: inherit;
+  //   -webkit-box-shadow: none;
+  //   box-shadow: none;
+  // }
+
+  // button {
+  //   margin-right: 1rem;
+  // }
+
+  // .btn {
+  //   border-radius: 0;
+  //   height: 4rem;
+  //   width: 46%;
+  //   border: 1px solid $eleague-primary-lightblue;
+  // }
+
+  // .btn-alt {
+  //   background: $eleague-primary-lightblue;
+  //   color: $eleague-navy-jumboblue;
+  // }
+
+  // .btn-outline {
+  //   color: $eleague-primary-lightblue;
+  //   background: transparent;
+  // }
+
+  // .btn-outline:hover {
+  //   background: $eleague-primary-lightblue;
+  //   color: $eleague-navy-jumboblue;
+  // }
+
+  // .btn-alt:hover {
+  //   background: transparent;
+  //   color: $eleague-primary-lightblue;
+  // }
+
+  // a, .text {
+  //   color: $eleague-primary-gray;
+  // }
+
+
+
+.panel{
+  position: fixed;
+  top: 10px;
+  right: -2px;
+  
+  }
+  
+  .panel.ng-hide {
+    right: -200px;
+  }
+  .panel.ng-hide-add, .panel.ng-hide-remove {
+    /* this is required as of 1.3x to properly
+       apply all styling in a show/hide animation */
+    transition: 0s linear all;
+  }
+  
+  
+  .panel.ng-hide-add-active, .panel.ng-hide-remove-active {
+  /* -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+      -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+      -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+      transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+  */
+  transition: all ease-in-out 2s;
+  }
+  .panel.ng-show-add-active {
+    display: block;
+  }
+
+
+  .hamburger {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 96px;
+    height: 96px;
+    font-size: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    border: 0;
+  }
+   
+   
+  .hamburger span {
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: 18px;
+    right: 18px;
+    height: 8px;
+    background: #1a2580;
+  }
+   
+  .hamburger span::before,
+  .hamburger span::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #1a2580;
+    content: "";
+  }
+   
+  .hamburger span::before {
+    top: -20px;
+  }
+   
+  .hamburger span::after {
+    bottom: -20px;
+  }

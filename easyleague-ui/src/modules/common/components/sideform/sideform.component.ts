@@ -74,7 +74,6 @@ export class SideFormComponent implements OnInit {
     }
 
     searchPlayers(searched: string) {
-        console.log(searched);
         this.userService.getUsersByName(searched).subscribe(players => {
             this.searchedPlayers = players;
         }, error => {
@@ -84,19 +83,14 @@ export class SideFormComponent implements OnInit {
     }
 
     addPlayer(value, position) {
-        console.log('adding player');
-        console.log(value);
-
         const player = this.searchedPlayers.find((user) => user.name.toLowerCase() === value.toLowerCase());
         const result = {
             id: player.id,
             name: player.name,
             position: position,
-            image:  player.image,
+            image: player.image,
         };
-        console.log(result);
         this.addedPlayers.push(result);
-        console.log(this.addedPlayers);
         this.searchedPlayers = [];
     }
 
@@ -108,7 +102,6 @@ export class SideFormComponent implements OnInit {
         data.value.created = this.timeService.convertToTimestamp(this.timeService.getTime());
         data.value.coach_id = 'user-davi';
 
-        console.log(data.value);
         this.teamService.createTeam(data.value).subscribe(response => {
             console.log(response);
         });

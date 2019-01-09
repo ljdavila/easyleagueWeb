@@ -1,0 +1,6 @@
+<!-- <div class="d-flex flex-row background"> -->
+<div class="background">
+ 
+</div>
+<app-login (animationChange)="toggleAnimation($event)" [@slideOutIn]="signupState"></app-login>
+<app-signup [animation]="signupState" (animationChange)="toggleAnimation($event)" [@slideInOut]="signupState"></app-signup>

@@ -7,3 +7,53 @@
   </section>
 
 </div> -->
+
+<section id="jumbotron">
+
+  <div class="jumbotron">
+
+  </div>
+  <div class=" d-flex flex-row" id="card">
+    <div class="card main-card">
+
+    </div>
+  </div>
+</section>
+
+<div class="body d-flex flex-row p-5 w-100">
+  <div class="d-flex flex-column first-column text-nowrap">
+    <!-- <ul> -->
+    <span><strong>Followers:</strong> 100</span>
+    <span><strong>Following:</strong> 100</span>
+
+    <!-- </ul> -->
+  </div>
+  <div class="d-flex flex-column newsfeed-wrapper">
+    <div class="card posts" *ngFor="let card of cards">
+      dsd
+    </div>
+  </div>
+  <div class="d-flex flex-column third-column">
+    <div class="d-flex flex-row actions mb-5">
+      <div class="card action">
+          <span class="fa fa-globe"></span>
+      </div>
+      <div class="card action">
+          <span class=""></span>
+      </div>
+    </div>
+    <div class="d-flex flex-column rank-box p-3 justify-content-center">
+      <span class="title text-center">Rankings</span>
+      <div class="sports-wrapper">
+        <div class="options d-flex flex-row justify-content-center scrolling-wrapper">
+          <span *ngFor="let option of options">{{option}}</span>
+        </div>
+      </div>
+      <div class="cards-wrapper p-4">
+        <div class="card rank-card" *ngFor="let card of cards; let i=index">
+          {{i}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

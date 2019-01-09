@@ -1,6 +1,3 @@
-import { LoginComponent } from './../eleague/pages/login/login.component';
-import { EleagueModule } from './../eleague/eleague.module';
-
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './components/app/app.component';
@@ -24,6 +21,7 @@ import { GUARDS_DECLARATIONS } from './guards';
   ],
   imports: [
     NgbModule,
+    FormsModule,
     BrowserAnimationsModule,
     BrowserModule,
     NgbDropdownModule,
