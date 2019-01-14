@@ -9,47 +9,116 @@
 </div> -->
 
 <section id="jumbotron">
+  <div class="jumbotron"></div>
+  <div class=" d-flex flex-row" #scorecard>
+    <div class="card main-card"[@slideOutIn]="signupState" #scoreboard>
+      <div class="d-flex flex-row w-100">
+        <!-- <div>
 
-  <div class="jumbotron">
-
-  </div>
-  <div class=" d-flex flex-row" id="card">
-    <div class="card main-card">
-
+        </div> -->
+        <div class="d-flex flex-column scoreboard">
+          <span class="text-center" id="league-name">FIBA</span>
+          <div class="d-flex flex-row justify-content-center">
+            <div class="d-flex flex-column p-3">
+              <span id="hometeam" class="mr-2 text-center">Dogs</span>
+              <img src="../../../../assets/images/puppies-facts.jpg" alt="" class="logo">
+            </div>
+            <span class="score">40 - 35</span>
+            <div class="d-flex flex-column p-3">
+              <span id="visitorteam" class="text-center">Rats</span>
+              <img src="../../../../assets/images/puppies-facts.jpg" alt="" class="logo">
+            </div>
+          </div>
+        </div>
+        <div #container></div>
+        <div class="top-players d-flex flex-column">
+          <span class="text-center">Top players</span>
+          <div *ngFor="let top of tops">
+            <div class="card p-2 d-flex flex-row">
+              <img class="avatar mr-2" src="../../../../assets/images/wake.jpg" alt="">
+              <div class="d-flex flex-column tops">
+                <span>{{top}}:</span>
+                <small class="ml-2">Luis Davila</small>
+              </div>
+              <span id="top-stats" class="ml-4">46</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
-<div class="body d-flex flex-row p-5 w-100">
+<div class="scrolling-wrapper" id="games">
+  <div *ngFor="let card of cards">
+    <div id="event"  (click)="toggleAnimation()" class="card d-flex flex-row p-2 mr-2">
+      <div id="category">
+        G
+      </div>
+      <div class="d-flex flex-column align-items-start">
+        <div class="d-flex flex-row">
+          <div class="month ml-1">Nov</div>
+          <div class="card-text ml-3 time">8:00am to 10:00am</div>
+        </div>
+        <div class="d-flex flex-row justify-content-between">
+          <div class="date">12th</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="body d-flex flex-row w-100">
   <div class="d-flex flex-column first-column text-nowrap">
     <!-- <ul> -->
-    <span><strong>Followers:</strong> 100</span>
-    <span><strong>Following:</strong> 100</span>
-
+    <div class="d-flex flex-column box friends">
+      <span><strong>Followers:</strong> 100</span>
+      <span><strong>Following:</strong> 100</span>
+    </div>
+    <div class="d-flex flex-column trending-box">
+      <div class="title text-center p-3 border-bottom">
+        <span id="rank-title">Trending</span>
+      </div>
+      <div class="cards-wrapper">
+        <div class="trending-card" *ngFor="let card of cards; let i=index">
+          <strong>{{card}}</strong>
+        </div>
+      </div>
+    </div>
     <!-- </ul> -->
   </div>
   <div class="d-flex flex-column newsfeed-wrapper">
+    <div class="card poster">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Got something to say? Let it all out" aria-label="Recipient's username"
+          aria-describedby="basic-addon2">
+      </div>
+      <div class="d-flex flex-row-reverse p-2">
+        <span class="fa fa-picture-o"></span>
+        <span class="fa fa-video-camera"></span>
+      </div>
+    </div>
     <div class="card posts" *ngFor="let card of cards">
       dsd
     </div>
   </div>
   <div class="d-flex flex-column third-column">
-    <div class="d-flex flex-row actions mb-5">
-      <div class="card action">
-          <span class="fa fa-globe"></span>
+    <div class="d-flex flex-row actions">
+      <div class="card justify-content-center action">
+        <span class="fa fa-globe text-center"></span>
       </div>
       <div class="card action">
-          <span class=""></span>
+        <span class=""></span>
       </div>
     </div>
-    <div class="d-flex flex-column rank-box p-3 justify-content-center">
-      <span class="title text-center">Rankings</span>
-      <div class="sports-wrapper">
+    <div class="d-flex flex-column box">
+      <div class="title text-center p-3">
+        <span id="rank-title">Rankings</span>
+      </div>
+      <div class="sports-wrapper text-center">
         <div class="options d-flex flex-row justify-content-center scrolling-wrapper">
           <span *ngFor="let option of options">{{option}}</span>
         </div>
       </div>
-      <div class="cards-wrapper p-4">
+      <div class="cards-wrapper">
         <div class="card rank-card" *ngFor="let card of cards; let i=index">
           {{i}}
         </div>

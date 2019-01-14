@@ -19,51 +19,165 @@
   top: 5rem;
 }
 
+.scoreboard {
+  color: $eleague-off-white;
+  font-weight: bold;
+  font-size: 2rem;
+  height: 100%;
+  flex-grow: 2;
+  border-right: 1px solid darken(white, 85%);
+  .logo {
+    width: 15rem;
+    border-radius: 25rem;
+  }
+}
+
+#league-name {
+  font-size: 3rem;
+  font-weight: bold;
+
+}
+
+.score {
+  font-size: 7rem;
+  font-weight: bolder;
+  font-family: $polya;
+  padding-top: 2rem;
+}
+
+.top-players {
+  flex-grow: 1;
+  padding: 2rem;
+  span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $eleague-primary-lightblue;
+  }
+  .card {
+    margin-top: .5rem;
+    background:  lighten($eleague-navy-jumboblue, 4%);
+    height: 4rem;
+    color: $eleague-off-white;
+  }
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+}
+
+.tops{
+  span {
+    font-size: .9rem;
+  }
+  small {
+    font-size: 1rem;
+
+  }
+  #top-stats {
+    font-size: 3rem;
+    color: $eleague-off-white;
+  }
+}
+
+
+#games {
+  margin-top: 6rem;
+  padding-bottom: 2rem;
+  app-card {
+    flex: 0 0 auto;
+  }
+}
+
+::-webkit-scrollbar { 
+  display: none; 
+}
+
 .main-card {
   display: inline-block;
   height: 100%;
   background: lighten($eleague-navy-jumboblue, 2%);
-  border-radius: .2rem;
+  border-radius: .5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  .d-flex {
+    height: 100%;
+  }
 }
 
 .first-column {
-  margin-top: 10rem;
-  padding-right: 4rem;
-  margin-left: 1rem;
+  // padding-right: 4rem;
+  // margin-left: 1rem;
   padding-left: 0;  
-  flex-grow: 0;
+  flex-grow: 0.5;
 }
 
 .body {
-  height: 100%;
+  padding: 0 6rem 0 5rem;
+  overflow: overlay;
+}
+
+.poster {
+  padding: 1rem;
+  margin: .3rem;
+  margin-top: 0;
+  background: $eleague-navy-jumboblue;
+  width: 100%;
+  input {
+    background: rgba($eleague-primary-lightblue, .5);
+    height: 5rem;
+    border: .1rem solid $eleague-primary-lightblue;
+    color: $eleague-off-white;
+  }
+  .fa {
+    color: $eleague-primary-lightblue;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+  }
 }
 
 .posts {
-  height: 20rem;
+  height: 15rem;
   width: 100%;
   padding: 5rem;
   margin: .3rem;
-  margin-top: 0;
+  background: $eleague-off-white;
 }
 
 .newsfeed-wrapper {
-  border-left: 1px solid $eleague-navy-jumboblue;
-  margin-top: 10rem;
-  padding: 2rem;
+  // border-left: 1px solid $eleague-navy-jumboblue;
+  padding: 1rem;
   padding-top: 0;
   flex-grow: 3;
 }
 
 .cards-wrapper {
-  // background-color: rgb(13, 42, 53);
-  // border-radius: 1rem;
+  padding: 2rem;
 }
 
-.rank-box {
+.box {
   background-color: $eleague-navy-jumboblue;
-  border-radius: 1rem;
+  border-radius: .5rem;
 }
+
+.friends {
+  border-radius: .5rem;
+  padding: 1rem;
+  color: $eleague-primary-lightblue;
+  strong {
+    color: $eleague-off-white;
+  }
+}
+
+.trending-box {
+  background-color: $eleague-off-white;
+  margin-top: 1rem;
+  .cards-wrapper, .title {
+    color: $eleague-navy-jumboblue;
+  }
+}
+
 
 .rank-card {
   margin-bottom: .5rem;
@@ -71,18 +185,22 @@
   height: 4rem;
 }
 
+.trending-card {
+  margin-bottom: .5rem;
+  height: 4rem;
+}
+
 .third-column {
-  margin-top: 10rem;
-  // flex-grow: 0;
-  width: 22rem;
+  flex-grow: .5;
 }
 
 .title {
   color: $eleague-off-white;
   font-weight: bolder;
-  margin-bottom: 1rem;
   font-size: 2rem;
-  font-family: $polya;
+  span {
+    font-family: $polya;
+  }
 }
 
 .options {
@@ -99,19 +217,76 @@
   flex-wrap: nowrap;
   overflow-x: auto;
   span {
-    // flex: 0 0 auto;
+    flex: 0 0 auto;
   }
 }
 
 .actions {
-  height: 10rem;
-  margin-bottom: 1rem;
+  padding-bottom: .5rem;
 }
 
 .action {
   border-radius: .5rem;
-  width: 50%;
+  width: 100%;
   margin-right: .5rem;
+  height: 9.6rem;
+  background: $eleague-navy-jumboblue;
+  span {
+    font-size: 5rem;
+  }
+}
+
+.fa-globe {
+  // color: $eleague-primary-orange;
+  color: $eleague-primary-lightblue;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $eleague-off-white;
+  opacity: 1; /* Firefox */
+}
+
+
+#event {
+  // background: $eleague-off-white;
+ width: 18rem;
+ height: 5rem;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#event:hover {
+  background: white;
+  cursor: pointer;
+}
+
+
+#category {
+  background: $eleague-primary-lightblue;
+  color: white;
+  border-radius: .5rem;
+  // padding: 1.5rem;
+  font-size: 2rem;
+  font-weight: bolder;  
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
+  text-align: center;
+}
+
+
+.month {
+  font-size: 1rem;
+  color: $eleague-primary-orange;
+}
+
+.date {
+  font-size: 1.8rem;
+  line-height: .5;
+  padding-left: .3rem;
+}
+
+.time {
+  font-size: .8rem
 }
 
 
